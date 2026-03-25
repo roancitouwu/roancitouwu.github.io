@@ -48,6 +48,17 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url)
   
+  // Ignore non-HTTP/HTTPS protocols (like blob:, data:, chrome-extension:)
+  // This is CRITICAL for DRACO Web Workers to function correctly!
+  if (!url.protocol.startsWith('http')) {
+    return;
+  }
+  
+  // Ignore external origins (like gstatic for DRACO decoders)
+  if (url.origin !== self.location.origin) {
+    return;
+  }
+
   // Check if it's a model file
   const isModelFile = MODEL_EXTENSIONS.some(ext => url.pathname.endsWith(ext))
   
