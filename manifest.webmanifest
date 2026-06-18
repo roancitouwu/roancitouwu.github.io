@@ -1,0 +1,16 @@
+{
+  "name": "She Saved me",
+  "short_name": "She Saved me",
+  "description": "A narrative point-and-click adventure set in a moonlit forest.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#0c0a14",
+  "theme_color": "#141c33",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
