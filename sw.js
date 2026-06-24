@@ -1,8 +1,8 @@
 // Service Worker for Rita Dream - Asset Caching
 // VERSION is bumped on each deploy — triggers cache cleanup on activation.
-// La versión se SELLA en cada build con scripts/stamp-sw.mjs (reemplaza b1782275496276
+// La versión se SELLA en cada build con scripts/stamp-sw.mjs (reemplaza b1782275812299
 // por un id único) → el caché se invalida en cada deploy y no quedan texturas viejas.
-const CACHE_VERSION = 'b1782275496276'
+const CACHE_VERSION = 'b1782275812299'
 const CACHE_NAME = `rita-dream-${CACHE_VERSION}`
 const STATIC_CACHE = `rita-dream-static-${CACHE_VERSION}`
 const MODEL_CACHE = `rita-dream-models-${CACHE_VERSION}`
