@@ -34,14 +34,14 @@
     <link rel="preload" href="/models/walk_sprint.glb" as="fetch" crossorigin />
     <!-- Terrain textures (~8MB) loaded by ModelPreloader Phase 2 via requestIdleCallback.
          DO NOT preload here — they compete with critical JS bundle downloads. -->
-    <!-- Preload Draco decoder (local — cached by SW on first visit) -->
-    <link rel="preload" href="/draco/draco_wasm_wrapper.js" as="script" />
-    <link rel="preload" href="/draco/draco_decoder.wasm" as="fetch" crossorigin />
-    <script type="module" crossorigin src="/assets/index-ucNPOihy.js"></script>
+    <!-- NOTA: el decoder Draco ya NO se precarga aquí. Ningún modelo del boot usa Draco (Traveler
+         es KTX2, el resto meshopt) → el navegador avisaba "preloaded but not used". DRACOLoader lo
+         baja on-demand si algún GLB Draco se carga más tarde. -->
+    <script type="module" crossorigin src="/assets/index-Cu9_rnOL.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime-km5iIlDX.js">
     <link rel="modulepreload" crossorigin href="/assets/r3f-Dd3wtCg4.js">
     <link rel="modulepreload" crossorigin href="/assets/recast-OpObOqYJ.js">
-    <link rel="modulepreload" crossorigin href="/assets/three-core-Cr-5LIBP.js">
+    <link rel="modulepreload" crossorigin href="/assets/three-core-CXXDaPCz.js">
     <link rel="stylesheet" crossorigin href="/assets/index-CKi1PrxZ.css">
   </head>
   <body>
